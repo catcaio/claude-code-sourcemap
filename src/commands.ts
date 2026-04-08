@@ -13,6 +13,7 @@ import logout from './commands/logout.js'
 import onboarding from './commands/onboarding.js'
 import pr_comments from './commands/pr_comments.js'
 import releaseNotes from './commands/release-notes.js'
+import mcpValidateNotion from './commands/mcp-validate-notion.js'
 import review from './commands/review.js'
 import terminalSetup from './commands/terminalSetup.js'
 import { Tool, ToolUseContext } from './Tool.js'
@@ -85,6 +86,7 @@ const COMMANDS = memoize((): Command[] => [
   pr_comments,
   releaseNotes,
   bug,
+  mcpValidateNotion,
   review,
   terminalSetup,
   ...(isAnthropicAuthEnabled() ? [logout, login()] : []),
